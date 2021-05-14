@@ -1,0 +1,16 @@
+﻿@model User
+@{
+    ViewData["Title"] = "AddUser";
+}
+<h2>@ViewData["Title"].</h2>
+@using (@Html.BeginRouteForm("api", new { Controller = "User", Action = "AddUser" }, FormMethod.Post))
+{
+    <span>Enter Your First Name:</span> @Html.TextBoxFor(m => m.FName)
+    <br />
+    <span>Enter Your Last Name:</span> @Html.TextBoxFor(m => m.LName)
+    <br />
+    <span>Enter Your Age:</span> @Html.TextBoxFor(m => m.Age)
+    <br />
+
+    <input id="Submit" type="submit" value="submit" />
+}

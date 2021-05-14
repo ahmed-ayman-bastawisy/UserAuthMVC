@@ -1,0 +1,22 @@
+﻿@model User
+@{
+    ViewData["Title"] = "AddUser";
+}
+<h2>@ViewData["Title"].</h2>
+
+<p><span>First Name:</span> @Model.FName</p>
+<br />
+<p><span>Last Name:</span> @Model.LName</p>
+<br />
+<p><span>Age:</span> @Model.Age</p>
+<br />
+@if (Model.LegalAge)
+{
+    <p><span> Legal Age:</span> <i class="fa fa-check text-success"></i></p>
+    <br />
+}
+else
+{
+    <p><span> Legal Age:</span> <i class="fa fa-times text-danger"></i></p>
+    <br />
+}
